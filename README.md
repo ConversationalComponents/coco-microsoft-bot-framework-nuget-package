@@ -1,5 +1,9 @@
 # CoCo .NET CORE SDK For Microsoft Bot Framework
 
+SDK for implementing Conversational Components from CoCoHub in your Bot: 
+[https://conversationalcomponents.com](https://conversationalcomponents.com)
+
+
 ## Installation:
 
 ```
@@ -19,6 +23,10 @@ dotnet add package CoCoMicrosoftBotFrameworkSDK --version 1.0.3
 
     services.AddSingleton(conversationState);
    ```
+   
+* At your Bot class:
+
+
    - Bot class has to be inherited for **CoCoActivityHandler**:
    ```
        public class ExampleBot : CoCoActiviyHandler
