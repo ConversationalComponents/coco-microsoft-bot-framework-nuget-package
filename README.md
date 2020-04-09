@@ -62,4 +62,40 @@ dotnet add package CoCoMicrosoftBotFrameworkSDK --version 1.0.3
           }
       }
    ```
+   
+   
+   ## Additional CoCo Fuctions DOC
+   
+   ### ActivateComponent(turnContext, componentId) - Void
+   #### Arguments:
+   
+   * turnContext - Current turn context.
+   * componentId - Relevant component ID.
+   
+   #### Result:
+   
+   The function will activate a component. Save the active component ID at the conversation state.
+   
+   ### IsComponentActive(turnContext) - Bool
+   #### Arguments:
+   
+   * turnContext - Current turn context.
+   
+   #### Result:
+   
+   Returns True if an active component exists, otherwise False.
+   
+  
+   ### CallActiveComponent(turnContext) - Bool
+   #### Arguments:
+   
+   * turnContext - Current turn context.
+   
+   #### Result:
+   
+   Will handle the user input and send the component answer on it.
+   
+
+   
+   
     
