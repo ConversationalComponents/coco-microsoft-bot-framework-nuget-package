@@ -86,7 +86,7 @@ dotnet add package CoCoMicrosoftBotFrameworkSDK --version 1.0.3
    Returns True if an active component exists, otherwise False.
    
   
-   ### CallActiveComponent(turnContext) - Bool
+   ### CallActiveComponent(turnContext) - Void
    #### Arguments:
    
    * turnContext - Current turn context.
