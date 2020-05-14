@@ -75,7 +75,26 @@ namespace CoCoMicrosoftBotFrameworkSDK
                 }
 
                 await this.ConversationState.SaveChangesAsync(turnContext);
-                await turnContext.SendActivityAsync(cocoResponse.response);
+                foreach (Dictionary<string, string> response in cocoResponse.responses)
+                {
+                    var reply = MessageFactory.Text(response["text"]);
+
+
+                    if(response.ContainsKey("image"))
+                    {
+                        var imageUrl = response["image"];
+                        var attachment = new Attachment {
+                                                Name = imageUrl,
+                                                ContentType = "image/png",
+                                                ContentUrl = imageUrl,
+                                            };
+                        reply.Attachments = new List<Attachment>() { attachment };
+                    }
+
+                    await turnContext.SendActivityAsync(reply);
+
+
+                }
             }
         }
     }
